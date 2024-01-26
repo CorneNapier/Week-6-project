@@ -18,72 +18,7 @@
     opacity: 0.8;  
 }
 
-#hr {
-    display: inline-flex;
-    margin: 5px;
-    position: relative;
-    background-color: #22333B;
-    width: 150px;
-    height: 75px;
-    border-radius: 10px;
-    font-size: x-large;
-    justify-content: center;
-    padding: 15px 10px;
-}
-
-#min {
-    display: inline-flex;
-    margin: 5px;
-    position: relative;
-    background-color: #22333B;
-    width: 150px;
-    height: 75px;
-    border-radius: 10px;
-    font-size: x-large;
-    justify-content: center;
-    padding: 15px 10px;
-}
-
-#secs {
-    display: inline-flex;
-    margin: 5px;
-    position: relative;
-    background-color: #22333B;
-    width: 150px;
-    height: 75px;
-    border-radius: 10px;
-    font-size: x-large;
-    justify-content: center;
-    padding: 15px 10px;
-}
-
-#start {
-    display: inline-flex;
-    margin: 5px;
-    position: relative;
-    background-color: #22333B;
-    width: 150px;
-    height: 75px;
-    border-radius: 10px;
-    font-size: x-large;
-    justify-content: center;
-    padding: 15px 10px;
-}
-
-#pause {
-    display: inline-flex;
-    margin: 5px;
-    position: relative;
-    background-color: #22333B;
-    width: 150px;
-    height: 75px;
-    border-radius: 10px;
-    font-size: x-large;
-    justify-content: center;
-    padding: 15px 10px;
-}
-
-#stop {
+.timerBtn {
     display: inline-flex;
     margin: 5px;
     position: relative;
