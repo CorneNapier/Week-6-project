@@ -1,0 +1,97 @@
+* {
+    background-color: #A9927D;
+}
+
+#timer {
+    background-color: #5E503F;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#display {
+    background-color: #F2F4F3;
+    width: 500px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    opacity: 0.8;  
+}
+
+#hr {
+    display: inline-flex;
+    margin: 5px;
+    position: relative;
+    background-color: #22333B;
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+    font-size: x-large;
+    justify-content: center;
+    padding: 15px 10px;
+}
+
+#min {
+    display: inline-flex;
+    margin: 5px;
+    position: relative;
+    background-color: #22333B;
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+    font-size: x-large;
+    justify-content: center;
+    padding: 15px 10px;
+}
+
+#secs {
+    display: inline-flex;
+    margin: 5px;
+    position: relative;
+    background-color: #22333B;
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+    font-size: x-large;
+    justify-content: center;
+    padding: 15px 10px;
+}
+
+#start {
+    display: inline-flex;
+    margin: 5px;
+    position: relative;
+    background-color: #22333B;
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+    font-size: x-large;
+    justify-content: center;
+    padding: 15px 10px;
+}
+
+#pause {
+    display: inline-flex;
+    margin: 5px;
+    position: relative;
+    background-color: #22333B;
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+    font-size: x-large;
+    justify-content: center;
+    padding: 15px 10px;
+}
+
+#stop {
+    display: inline-flex;
+    margin: 5px;
+    position: relative;
+    background-color: #22333B;
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+    font-size: x-large;
+    justify-content: center;
+    padding: 15px 10px;
+}
