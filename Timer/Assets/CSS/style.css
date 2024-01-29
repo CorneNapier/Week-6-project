@@ -1,3 +1,6 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
 * {
     background-color: #A9927D;
 }
@@ -12,12 +15,17 @@
 }
 
 #display {
+    display: flex;
     background-color: #F2F4F3;
     width: 490px;
     height: 200px;
     overflow: hidden;
     border-radius: 10px;
-    opacity: 0.7;  
+    opacity: 0.7;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .timerBtn {
@@ -29,7 +37,8 @@
     width: 150px;
     height: 75px;
     border-radius: 10px;
-    font-size: x-large;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
-    padding: 15px 10px;
+    padding: 25px 10px;
 }
