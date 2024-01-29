@@ -17,7 +17,7 @@ hr.addEventListener('click', function increment() {
     display.innerHTML = Number(numberHr).toLocaleString('en') + ':' + Number(numberMin).toLocaleString('en') + ':' + Number(numberSec).toLocaleString('en');
     
     if (numberHr >= 23) {
-        return 0;
+        return numberHr = 0;
     }
     else {
         numberHr++
@@ -28,7 +28,7 @@ hr.addEventListener('click', function increment() {
 min.addEventListener('click', function increment() {
     display.innerHTML = Number(numberHr).toLocaleString('en') + ':' + Number(numberMin).toLocaleString('en') + ':' + Number(numberSec).toLocaleString('en');
     if (numberMin >= 59) {
-        return 0;
+        return numberMin = 0, numberHr++;
     }
     else { 
         numberMin++
@@ -38,7 +38,7 @@ min.addEventListener('click', function increment() {
 sec.addEventListener('click', function increment() {
     display.innerHTML = Number(numberHr).toLocaleString('en') + ':' + Number(numberMin).toLocaleString('en') + ':' + Number(numberSec).toLocaleString('en');
     if (numberSec >= 59) {
-        return 0;
+        return numberSec = 0, numberMin++;
     }
     else {
         numberSec++
