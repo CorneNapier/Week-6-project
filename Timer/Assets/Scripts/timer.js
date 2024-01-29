@@ -10,7 +10,10 @@ let numberHr = 0;
 let numberMin = 0;
 let numberSec = 0;
 
-display.innerHTML = Number(numberHr).toLocaleString('en') + ':' + Number(numberMin).toLocaleString('en') + ':' + Number(numberSec).toLocaleString('en');
+function timerDisplay() {
+    display.innerHTML = Number(numberHr).toLocaleString('en', {minimumIntegerDigits: 2, useGrouping: false}) + ':' + Number(numberMin).toLocaleString('en', {minimumIntegerDigits: 2, useGrouping: false}) + ':' + Number(numberSec).toLocaleString('en', {minimumIntegerDigits: 2, useGrouping: false});
+}
+timerDisplay();
 
 //set timer
 hr.addEventListener('click', function increment() {
@@ -19,9 +22,8 @@ hr.addEventListener('click', function increment() {
     }
     else {
         numberHr++
-        display.innerHTML = Number(numberHr).toLocaleString('en') + ':' + Number(numberMin).toLocaleString('en') + ':' + Number(numberSec).toLocaleString('en');
-    }
-});
+        timerDisplay();
+}});
 
 min.addEventListener('click', function increment() {
     if (numberMin >= 59) {
@@ -29,7 +31,7 @@ min.addEventListener('click', function increment() {
     }
     else { 
         numberMin++
-        display.innerHTML = Number(numberHr).toLocaleString('en') + ':' + Number(numberMin).toLocaleString('en') + ':' + Number(numberSec).toLocaleString('en');
+        timerDisplay();
     }
 });
 
@@ -39,7 +41,7 @@ sec.addEventListener('click', function increment() {
     }
     else {
         numberSec++
-        display.innerHTML = Number(numberHr).toLocaleString('en') + ':' + Number(numberMin).toLocaleString('en') + ':' + Number(numberSec).toLocaleString('en');
+        timerDisplay();
     }
 });
 
@@ -48,5 +50,5 @@ clear.addEventListener('click', function clear() {
     numberHr = 0;
     numberMin = 0;
     numberSec = 0;
-    display.innerHTML = Number(numberHr).toLocaleString('en') + ':' + Number(numberMin).toLocaleString('en') + ':' + Number(numberSec).toLocaleString('en');
+    timerDisplay();
 });
