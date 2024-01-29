@@ -11,7 +11,7 @@ let numberMin = 0;
 let numberSec = 0;
 
 function timerDisplay() {
-    display.innerHTML = Number(numberHr).toLocaleString('en', {minimumIntegerDigits: 2, useGrouping: false}) + ':' + Number(numberMin).toLocaleString('en', {minimumIntegerDigits: 2, useGrouping: false}) + ':' + Number(numberSec).toLocaleString('en', {minimumIntegerDigits: 2, useGrouping: false});
+    display.innerHTML = Number(numberHr).toLocaleString('en', { minimumIntegerDigits: 2, useGrouping: false }) + ':' + Number(numberMin).toLocaleString('en', { minimumIntegerDigits: 2, useGrouping: false }) + ':' + Number(numberSec).toLocaleString('en', { minimumIntegerDigits: 2, useGrouping: false });
 }
 timerDisplay();
 
@@ -23,13 +23,14 @@ hr.addEventListener('click', function increment() {
     else {
         numberHr++
         timerDisplay();
-}});
+    }
+});
 
 min.addEventListener('click', function increment() {
     if (numberMin >= 59) {
         return numberMin = -1, numberHr++;
     }
-    else { 
+    else {
         numberMin++
         timerDisplay();
     }
