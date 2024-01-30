@@ -23,6 +23,7 @@
     border-radius: 10px;
     opacity: 0.7;
     font-family: 'Silkscreen', sans-serif;
+    color: #0A0908;
     font-size: 5rem;
     justify-content: center;
     align-items: center;
@@ -37,6 +38,8 @@
     width: 150px;
     height: 75px;
     border-radius: 10px;
+    font-style: italic;
+    font-weight: 900;
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
