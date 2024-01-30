@@ -76,6 +76,7 @@ startbtn.addEventListener('click', function start() {
         } else if (numberHr > 0) {
             numberHr--;
             numberMin = 59;
+            numberSec = 59;
         } else {
             // If all timer values are 0, stop the interval
             clearInterval(intervalId);
