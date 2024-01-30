@@ -18,8 +18,6 @@ function timerDisplay() {
 }
 timerDisplay();
 
-
-
 //sets timer variables using buttons
 hr.addEventListener('click', function increment() {
     if (numberHr >= 23) {
@@ -28,7 +26,7 @@ hr.addEventListener('click', function increment() {
     else {
         numberHr++;
         timerDisplay();
-        
+
     }
 });
 
