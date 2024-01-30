@@ -3,7 +3,7 @@ let display = document.getElementById('display');
 let hr = document.getElementById('hr');
 let min = document.getElementById('min');
 let sec = document.getElementById('secs');
-let start = document.getElementById('start');
+let startbtn = document.getElementById('start');
 let pause = document.getElementById('pause');
 let clear = document.getElementById('clear');
 
@@ -18,14 +18,17 @@ function timerDisplay() {
 }
 timerDisplay();
 
+
+
 //sets timer variables using buttons
 hr.addEventListener('click', function increment() {
     if (numberHr >= 23) {
         return numberHr = -1;
     }
     else {
-        numberHr++
+        numberHr++;
         timerDisplay();
+        
     }
 });
 
@@ -34,7 +37,7 @@ min.addEventListener('click', function increment() {
         return numberMin = -1, numberHr++;
     }
     else {
-        numberMin++
+        numberMin++;
         timerDisplay();
     }
 });
@@ -44,7 +47,7 @@ sec.addEventListener('click', function increment() {
         return numberSec = -1, numberMin++;
     }
     else {
-        numberSec++
+        numberSec++;
         timerDisplay();
     }
 });
@@ -56,3 +59,36 @@ clear.addEventListener('click', function clear() {
     numberSec = 0;
     timerDisplay();
 });
+
+//start and pause the timer
+let intervalId; // Variable to store the interval ID
+
+startbtn.addEventListener('click', function start() {
+    // Clear any existing interval to prevent multiple intervals running simultaneously
+    clearInterval(intervalId);
+
+    // Set up a new interval to decrement the timer values every second
+    intervalId = setInterval(function () {
+        // Check if any of the timer values are greater than 0 before decrementing
+        if (numberSec > 0) {
+            numberSec--;
+        } else if (numberMin > 0) {
+            numberMin--;
+            numberSec = 59;
+        } else if (numberHr > 0) {
+            numberHr--;
+            numberMin = 59;
+        } else {
+            // If all timer values are 0, stop the interval
+            clearInterval(intervalId);
+        }
+
+        timerDisplay(); // Update the display after decrementing
+    }, 1000); // Interval set to 1000 milliseconds (1 second)
+});
+
+pause.addEventListener('click', function pause() {
+    // Clear the interval to pause the countdown
+    clearInterval(intervalId);
+});
+
