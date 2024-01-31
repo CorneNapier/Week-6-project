@@ -10,8 +10,11 @@
     width: 490px;
     height: 375px;
     border-radius: 10px;
-    position: relative;
-    margin: auto;
+    position: absolute;
+    margin:auto auto;
+    z-index: 1;
+    bottom: 50%;
+    left: 40%;
 }
 
 #display {
@@ -45,4 +48,25 @@
     justify-content: center;
     padding: 25px 10px;
     cursor: pointer;
+}
+
+
+#clock {
+    position: absolute;
+    border-radius: 50%;
+    width: 900px;
+    height: 900px;
+    animation: rotate 25s linear infinite;
+    z-index: 0;
+    left: 32%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateY(0), rotate(0);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
 }
