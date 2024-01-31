@@ -5,16 +5,14 @@
     background-color: #A9927D;
 }
 
-#timer {
+.timer {
     background-color: #5E503F;
     width: 490px;
     height: 375px;
     border-radius: 10px;
-    position: absolute;
+    position: relative;
     margin:auto auto;
     z-index: 1;
-    bottom: 50%;
-    left: 40%;
 }
 
 #display {
@@ -50,20 +48,19 @@
     cursor: pointer;
 }
 
-
 #clock {
-    position: absolute;
     border-radius: 50%;
-    width: 900px;
-    height: 900px;
+    width: 490px;
+    height: 490px;
     animation: rotate 25s linear infinite;
-    z-index: 0;
-    left: 32%;
+    position: relative;
+    margin:auto auto;
+    overflow: hidden;
 }
 
 @keyframes rotate {
     0% {
-        transform: translateY(0), rotate(0);
+        transform: rotate(0);
     }
 
     100% {
