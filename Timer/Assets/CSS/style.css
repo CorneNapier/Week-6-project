@@ -52,13 +52,12 @@
     border-radius: 50%;
     width: 490px;
     height: 490px;
-    rotate: 5deg;
-    animation: rotate 25s linear infinite;
+    rotate: 6deg;
+    animation: rotate 30s linear infinite;
     animation-play-state: paused;
     position: relative;
     margin:auto auto;
-    overflow: hidden;
-    
+    overflow: hidden;  
 }
 
 @keyframes rotate {
