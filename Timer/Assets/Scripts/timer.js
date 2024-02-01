@@ -6,6 +6,7 @@ let sec = document.getElementById('secs');
 let startbtn = document.getElementById('start');
 let pause = document.getElementById('pause');
 let clear = document.getElementById('clear');
+let clock = document.getElementById('clock');
 
 //sets the timer variables to zero.
 let numberHr = 0;
@@ -26,7 +27,6 @@ hr.addEventListener('click', function increment() {
     else {
         numberHr++;
         timerDisplay();
-
     }
 });
 
@@ -52,6 +52,7 @@ sec.addEventListener('click', function increment() {
 
 //resets timer variables and clears the display 
 clear.addEventListener('click', function clear() {
+    clock.style.animationPlayState = 'paused';
     numberHr = 0;
     numberMin = 0;
     numberSec = 0;
@@ -62,6 +63,7 @@ clear.addEventListener('click', function clear() {
 let intervalId; // Variable to store the interval ID
 
 startbtn.addEventListener('click', function start() {
+    clock.style.animationPlayState = 'running';
     // Clear any existing interval to prevent multiple intervals running simultaneously
     clearInterval(intervalId);
 
@@ -78,6 +80,7 @@ startbtn.addEventListener('click', function start() {
             numberMin = 59;
             numberSec = 59;
         } else {
+            clock.style.animationPlayState = 'paused';
             // If all timer values are 0, stop the interval
             clearInterval(intervalId);
         }
@@ -87,6 +90,7 @@ startbtn.addEventListener('click', function start() {
 });
 
 pause.addEventListener('click', function pause() {
+    clock.style.animationPlayState = 'paused';
     // Clear the interval to pause the countdown
     clearInterval(intervalId);
 });
