@@ -90,4 +90,3 @@ pause.addEventListener('click', function pause() {
     // Clear the interval to pause the countdown
     clearInterval(intervalId);
 });
-
